@@ -23,7 +23,7 @@ const MAX_THOUGHT_CHARS = 70
 const MAX_THOUGHT_BUFFER = 2000
 const MAX_INPUT_HEAD = 4000
 const LARGE_INPUT_CHARS = 1024
-const MAX_LABEL_CHARS = 120
+const MAX_LABEL_CHARS = 400
 const MAX_AGENT_NAME_CHARS = 40
 const MAX_AGENT_ROWS = 6
 const STREAM_THROTTLE_MS = 250
@@ -492,6 +492,7 @@ export const register: Register = on => {
         <Box
           flexDirection="column"
           borderStyle="round"
+          width={e.props.bodyColumns}
           borderColor={isWorking ? color : 'gray'}
           paddingX={1}
           alignSelf="flex-start"
